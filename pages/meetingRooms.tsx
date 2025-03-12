@@ -17,6 +17,8 @@ const MeetingRooms = () => {
     return (
         <ThemeProvider theme={theme}>
             <div style={{ width: "96%", padding: "2%" }}>
+
+                {/* Фильтрация */}
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                     <Typography variant='h6'>Переговорные комнаты</Typography>
                     <Box sx={{ display:"flex", alignItems: "center", gap: 2 }}>
@@ -39,6 +41,7 @@ const MeetingRooms = () => {
                     </Box>
                 </Box>
                 
+                {/* Таблица */}
                 <TableContainer component={Paper}>
                     <Table>
                     <TableHead>
