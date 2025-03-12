@@ -12,14 +12,16 @@ const room = {
 };
   
 const MeetingRooms = () => {
+    const [city, setCity] = useState("Екатеринбург");
+
     return (
         <ThemeProvider theme={theme}>
             <div style={{ width: "96%", padding: "2%" }}>
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                     <Typography variant='h6'>Переговорные комнаты</Typography>
-                    <Box sx={{ display:"flex", alignItems: "center" }}>
-                        <TextField variant="outlined" placeholder="Text" />
-                        <Select  >
+                    <Box sx={{ display:"flex", alignItems: "center", gap: 2 }}>
+                        <TextField variant="outlined" placeholder="Текст" />
+                        <Select value={city} onChange={(e) => setCity(e.target.value)}>
                             <MenuItem value="Екатеринбург">Екатеринбург</MenuItem>
                             <MenuItem value="Москва">Москва</MenuItem>
                             <MenuItem value="Санкт-Петербург">Санкт-Петербург</MenuItem>
@@ -28,11 +30,11 @@ const MeetingRooms = () => {
                         </Select>
                         <Box>
                             <Button variant="contained" color="success">Все</Button>
-                            <Button variant="outlined">Активные</Button>
+                            <Button variant="outlined" color="secondary">Активные</Button>
                         </Box>
                         <Box>
                             <Button variant="contained" color="success">Все</Button>
-                            <Button variant="outlined">Доступные мне</Button>
+                            <Button variant="outlined" color="secondary">Доступные мне</Button>
                         </Box>
                     </Box>
                 </Box>

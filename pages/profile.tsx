@@ -13,15 +13,21 @@ const ProfilePage = () => {
             emailNotifications: true,
             webPush: true,
     });
+
+    const [isEditingPassword, setIsEditingPassword] = useState(false);
+    const [password, setPassword] = useState("");
+    const [isEdited, setIsEdited] = useState(false);
     
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setProfile((prev) => ({ ...prev, [name]: value }));
+        setIsEdited(true);
     };
-
+    
     const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, checked } = e.target;
         setProfile((prev) => ({ ...prev, [name]: checked }));
+        setIsEdited(true);
     };
 
     return (
@@ -29,8 +35,8 @@ const ProfilePage = () => {
             <div style={{ width: "96%", padding: "2%" }}>
                 {/* Заголовок */}
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                    <Typography variant='h6'>Профиль</Typography>
-                    <Button variant="contained" color='primary' > Архив мероприятий</Button>
+                    <Typography variant="h6">Профиль</Typography>
+                    <Button variant="contained" color="primary">Архив мероприятий</Button>
                 </Box>
 
                 {/* Данные пользователя */}
@@ -44,7 +50,8 @@ const ProfilePage = () => {
                         <Box sx={{ width: "50%", display: "flex", flexDirection: "column", gap: 2 }}>
                             <TextField label="Email" name="email" value={profile.email} fullWidth />
                             <TextField label="Новый пароль" variant="outlined" type="password" fullWidth sx={{ display: "none" }} />
-                            <Button variant="outlined" color='primary' fullWidth>
+                            <Button variant="outlined" color="secondary" fullWidth
+                                    onClick={() => setIsEditingPassword(!isEditingPassword)}>
                                 <img src="/images/edit-icon.svg" alt="icon" style={{ marginRight: 5 }} /> 
                                 Изменить пароль
                             </Button>
@@ -67,11 +74,11 @@ const ProfilePage = () => {
                 </Box>
                 {/* Кнопки */}
                 <Box sx={{ display: "flex", gap: 2, justifyContent: "flex-end", marginTop: "17%" }}>
-                    <Button variant="outlined">
+                    <Button variant="outlined" color="secondary">
                         <img src="/images/cancel-icon.svg" alt="icon" style={{ marginRight: 5 }} />
                         Отменить
                     </Button>
-                    <Button variant="contained" color="primary">
+                    <Button variant={isEdited ? "contained" : "outlined"} color={isEdited ? "primary" : "secondary"}>
                         <img src="/images/save-icon.svg" alt="icon" style={{ marginRight: 5 }} />
                         Сохранить
                     </Button>

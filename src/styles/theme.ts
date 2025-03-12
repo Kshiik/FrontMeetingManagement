@@ -5,9 +5,23 @@ const theme = createTheme({
     primary: {
       main: '#603F99', 
     },
+    secondary: {
+      main: '#A3A3A3', 
+    },
   },
   typography: {
     fontFamily: 'Mont, sans-serif',
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          fontSize: "16px",
+          padding: "13px 26px",
+          borderRadius: "0",
+        },
+      },
+    },
   },
 });
 
