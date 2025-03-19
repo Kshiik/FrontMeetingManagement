@@ -18,7 +18,48 @@ const theme = createTheme({
         root: {
           fontSize: "16px",
           padding: "13px 26px",
+          boxShadow: 'none',
           borderRadius: "0",
+        },
+      },
+    },
+    MuiTable: {
+      styleOverrides: {
+        root: {
+          borderCollapse: 'collapse',
+          width: '100%',
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+          borderRadius: "0",
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        head: {
+          backgroundColor: '#E3E3E3',
+          color: '#858585',
+          padding: '12px 16px',
+          // borderLeft: '1px solid #858585', 
+        },
+        body: {
+          color: '#333',
+          padding: '12px 16px',
+          borderBottom: "none",
+        },
+      },
+    },
+    MuiTableRow: {
+      styleOverrides: {
+        root: {
+          '&:nth-of-type(odd)': {
+            backgroundColor: '#F4F4F4',
+          },
         },
       },
     },

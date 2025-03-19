@@ -18,7 +18,7 @@ const Login = () => {
 
           <Box sx={{ display: "flex" }}>
               <img src="/images/account-icon.svg" alt="icon" style={{ marginRight: 5 }} />
-              <Typography variant="h6">Вход</Typography>
+              <Typography variant="h5">Вход</Typography>
           </Box>
 
           <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 3 }}>
