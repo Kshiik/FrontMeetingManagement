@@ -16,10 +16,17 @@ const theme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: "16px",
-          padding: "13px 26px",
+          fontSize: "14px",
+          padding: "13px 13px",
           boxShadow: 'none',
           borderRadius: "0",
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
         },
       },
     },
