@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, ThemeProvider, List, ListItemButton, ListItemIcon, ListItemText, Typography, Button, Icon } from '@mui/material';
-import '../src/styles/global.css';
-import theme from '../src/styles/theme';
+import '../styles/global.css';
+import theme from '../../../styles/theme';
 
 const Sidebar = () => {
   
@@ -43,6 +43,6 @@ const Sidebar = () => {
             </Box>
         </ThemeProvider>
     );
-  };
+};
   
-  export default Sidebar;
+export default Sidebar;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, ThemeProvider, TextField, Button, Checkbox, FormControlLabel, Select, MenuItem, Typography } from "@mui/material";
-import '../src/styles/global.css';
-import theme from '../src/styles/theme';
+import '../../styles/global.css';
+import theme from '../../styles/theme';
 
 const ProfilePage = () => {
         const [profile, setProfile] = useState({

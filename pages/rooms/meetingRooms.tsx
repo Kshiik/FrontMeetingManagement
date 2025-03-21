@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TextField, Select, MenuItem, Button, ThemeProvider } from "@mui/material";
-import '../src/styles/global.css';
-import theme from '../src/styles/theme';
+import '../../styles/global.css';
+import theme from '../../styles/theme';
 
 const countRooms = 12;
 const rooms = Array(countRooms).fill({

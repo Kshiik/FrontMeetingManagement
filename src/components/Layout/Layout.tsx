@@ -1,8 +1,8 @@
 "use client";
 
 import { ThemeProvider } from '@mui/material/styles';
-import theme from '../src/styles/theme';
-import '../src/styles/global.css';
+import theme from '../../../styles/theme';
+import '../styles/global.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

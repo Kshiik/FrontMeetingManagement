@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { TextField, Button, Typography, Dialog } from '@mui/material';
 import { Box, ThemeProvider } from '@mui/system';
-import '../../src/styles/global.css';
-import theme from '../../src/styles/theme';
+import '../../styles/global.css';
+import theme from '../../styles/theme';
 
 const Login = () => {
   const [open] = useState(true);
